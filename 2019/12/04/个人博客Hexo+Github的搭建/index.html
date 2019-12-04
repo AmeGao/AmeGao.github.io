@@ -69,11 +69,11 @@ G,">
 <h2 id="安装Git和Node-js"><a href="#安装Git和Node-js" class="headerlink" title="安装Git和Node.js"></a>安装Git和Node.js</h2><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h3><ul>
 <li>Git官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></li>
 </ul>
-<p>下载，一路点“下一步”按默认配置完成安装</p>
+<p>下载，一路点“下一步”按默认配置完成安装。</p>
 <h3 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2. 安装Node.js"></a>2. 安装Node.js</h3><ul>
 <li>Node.js官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></li>
 </ul>
-<p>下载安装并</p>
+<p>下载并安装，同样一路点击“下一步”完成安装。</p>
 <h3 id="3-查看是否安装成功"><a href="#3-查看是否安装成功" class="headerlink" title="3. 查看是否安装成功"></a>3. 查看是否安装成功</h3><p><img src="/.com//install_information.jpg" alt="安装信息"></p>
 <h2 id="注册Github账号并配置"><a href="#注册Github账号并配置" class="headerlink" title="注册Github账号并配置"></a>注册Github账号并配置</h2><h3 id="1-注册账号"><a href="#1-注册账号" class="headerlink" title="1. 注册账号"></a>1. 注册账号</h3><ul>
 <li>Github官网: <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></li>
@@ -90,19 +90,19 @@ G,">
 <p>回车之后会询问文件名以及是否需要设置密码，默认不需要设置密码，三个回车之后，会在当前系统用户目录下生成.ssh文件夹，找到其中名为id_rsa.pub的文件右键编辑，复制全部内容。打开Github用户头像下的Settings选项，找到”SSH and GPF keys”，单击”new SSH key”，将刚复制的ssh密钥复制进key框中，至于title随便起，然后“Add SSH key”，这样就将Git和Github连接起来了。回Git bush中检验，输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span></pre></td></tr></table></figure>
 
-<p>如果输出中有Hi+你的用户名，说明连接成功，可以对GitHub进行推送了。</p>
+<p>如果输出中有Hi+你的用户名，说明连接成功，连接你的仓库将不再受到限制。</p>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a><strong>安装Hexo</strong></h2><p>在想要保存的路径上新建一个文件夹用于存放Hexo框架，今后的博客文件等也会存放在这个文件夹中，文件夹名称可以自定义。创建完成后，进入文件夹，在当前路径下打开commend窗口，使用node.js集成的npm安装hexo，输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cil</span></pre></td></tr></table></figure>
 
-<p>进度条跑完之后说明hexo框架安装完成。</p>
-<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a><strong>创建博客</strong></h2><p>安装完hexo框架之后，我们就可以开始创建我们的博客，攥写第一篇博文了，同一个目录下，在cmd窗口输入：</p>
+<p>进度条跑完之后没有任何错误说明hexo框架安装完成。</p>
+<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a><strong>创建博客</strong></h2><p>安装完hexo框架，我们可以开始创建我们的博客，撰写第一篇博文了，同一个目录下，在cmd窗口输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo init</span></pre></td></tr></table></figure>
 
 <p>初始化博客文件夹，所有以后创建的博文都会储存在这个文件夹中，初始化结束后，文件夹会被结构化成多个文件夹，其中sourse文件夹下的_post被用以储存你所撰写的.md文件。</p>
 <p>接下来建立第一篇博文，检测我们的博客是否建立成功：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo new (post) my_fitst_blog</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo g  (hexo generate)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">hexo s  (hexo server)</span></pre></td></tr></table></figure>
 
-<p>输入结束后，打开浏览器输入地址“localhost:4000”，如果提示报错，说明4000端口被占用，解除占用后即可使用。</p>
+<p>输入结束，打开浏览器输入地址“localhost:4000”，如果提示报错，说明4000端口被占用，解除占用后即可使用。</p>
 <h3 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a><strong>推送网站</strong></h3><p>我们看到，刚才我们访问的只是本地的预览，既然我们搭建的是hexo+GitHub的个人博客，那么就需要将网站推送到github上。</p>
 <p>打开新建的文件夹中_config.yml文件，在文件最后的deploy下，修改配置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="attr">type:</span> <span class="string">git</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="attr">repo:</span> <span class="string">git@github.com:你的用户名/你的用户名.github.io.git</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span></pre></td></tr></table></figure>
@@ -110,7 +110,7 @@ G,">
 <p>保存配置文件。该配置主要是告诉hexo你的博客要部署在哪里。但是单单改配置不足以我们完成部署操作，还需要一个git的部署插件，在git bush中输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span></pre></td></tr></table></figure>
 
-<p>下载完成后，就可以开始部署，输入以下命令：</p>
+<p>下载完成后，开始部署，输入以下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo g</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">hexo d</span></pre></td></tr></table></figure>
 
 <p>运行完成之后，打开浏览器，输入最开始仓库的名称，即GitHub自动分配的域名，就可以看到你新建的博客了。</p>
